@@ -3,9 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{3AD63A93-C889-46E9-B337-EC4E60397AD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{CDE52E36-7274-455D-AA45-2D0879A4CEAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{ABF0C272-AF1C-47A4-9507-E2BBCCDED176}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuyerService", "BuyerService", "{94642C93-D8A7-4950-9D3F-ECC4347393DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyerService.API", "Services\BuyerService\BuyerService.API\BuyerService.API.csproj", "{5CB51C9E-3D62-4F71-9781-1D2576DB2EB6}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CB51C9E-3D62-4F71-9781-1D2576DB2EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB51C9E-3D62-4F71-9781-1D2576DB2EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB51C9E-3D62-4F71-9781-1D2576DB2EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB51C9E-3D62-4F71-9781-1D2576DB2EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94642C93-D8A7-4950-9D3F-ECC4347393DD} = {ABF0C272-AF1C-47A4-9507-E2BBCCDED176}
+		{5CB51C9E-3D62-4F71-9781-1D2576DB2EB6} = {94642C93-D8A7-4950-9D3F-ECC4347393DD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {73C5A472-3E83-4F62-9112-8EA5B75FD1C5}
