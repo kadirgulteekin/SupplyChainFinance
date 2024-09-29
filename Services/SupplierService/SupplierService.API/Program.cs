@@ -1,8 +1,9 @@
-using BuyerService.API.Mapping;
 using BuyerService.Infrastructure.Data;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using Shared.Events;
+using SupplierService.API.Consumers;
+using SupplierService.API.Mapping;
+using SupplierService.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,30 +16,33 @@ builder.Services.AddSwaggerGen();
 
 ServiceConfigurator.Configure(builder.Services);
 
-builder.Services.AddDbContext<ApplicationDbContext>(opt =>
+builder.Services.AddDbContext<SupplierDbContext>(opt =>
 {
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), configure =>
     {
-        configure.MigrationsAssembly("BuyerService.Infrastructure");
+        configure.MigrationsAssembly("SupplierService.Infrastructure");
     });
 });
+
 
 builder.Services.AddMassTransit(x =>
 {
+    x.AddConsumer<InvoiceUploadedEventConsumer>(); 
 
-    // Default Port: 5672
     x.UsingRabbitMq((context, cfg) =>
     {
-        cfg.Host(builder.Configuration["RabbitMQUrl"], "/", host =>
+        cfg.Host("rabbitmq://localhost", h =>
         {
-            host.Username("guest");
-            host.Password("guest");
+            h.Username("guest");
+            h.Password("guest");
+        });
+
+        cfg.ReceiveEndpoint("invoice-uploaded-event", e =>
+        {
+            e.ConfigureConsumer<InvoiceUploadedEventConsumer>(context); 
         });
     });
 });
-
-builder.Services.AddMassTransitHostedService();
-
 
 var app = builder.Build();
 
