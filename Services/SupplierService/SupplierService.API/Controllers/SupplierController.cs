@@ -42,7 +42,7 @@ namespace SupplierService.API.Controllers
             }
 
             var response = await _supplierServices.RequestEarlyPaymentAsync(invoiceId);
-            if (!response.IsSuccessful)
+            if (response.IsSuccessful)
             {
                 return NotFound(response.Errors);
             }

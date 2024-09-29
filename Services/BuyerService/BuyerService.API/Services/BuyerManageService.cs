@@ -47,9 +47,9 @@ namespace BuyerService.API.Services
                     TermDate = invoice.TermDate,
                     StatusType = invoice.Status switch
                     {
-                        InvoiceStatus.New => StatusType.New,
-                        InvoiceStatus.Used => StatusType.Used,
-                        InvoiceStatus.Paid => StatusType.Paid,
+                        InvoiceStatus.New => InvoiceStatus.New,
+                        InvoiceStatus.Used => InvoiceStatus.Used,
+                        InvoiceStatus.Paid => InvoiceStatus.Paid,
                         _ => throw new ArgumentOutOfRangeException($"Unexpected status: {invoice.Status}")
                     }
                 };

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,13 +14,13 @@ namespace Shared.Events
         public string? SupplierTaxId { get; set; } 
         public decimal InvoiceCost { get; set; } 
         public DateTime TermDate { get; set; }  
-        public StatusType StatusType { get; set; }
+        public InvoiceStatus StatusType { get; set; }
     }
 
-    public enum StatusType
-    {
-        New = 0,
-        Used = 1,
-        Paid = 2
-    }
+    //public enum StatusType
+    //{
+    //    New = 0, 
+    //    Used = 1,
+    //    Paid = 2
+    //}
 }

@@ -46,7 +46,8 @@ namespace SupplierService.API.Services
 
         public async Task<ResponseDto<Invoice>> GetInvoicesBySupplierIdAsync(string supplierTaxId)
         {
-            var invoice = await _supplierDbContext.Invoices.FindAsync(supplierTaxId);
+            var invoice = await _supplierDbContext.Invoices.FirstOrDefaultAsync(x => 
+            x.SupplierTaxId == supplierTaxId);
 
             return ResponseDto<Invoice>.Success(invoice, StatusCodes.Status200OK);
         }
@@ -61,7 +62,7 @@ namespace SupplierService.API.Services
 
         public async Task<ResponseDto<Invoice>> RequestEarlyPaymentAsync(string invoiceId)
         {
-            var invoice = await _supplierDbContext.Invoices.FindAsync(invoiceId);
+            var invoice = await _supplierDbContext.Invoices.FirstOrDefaultAsync(x => x.InvoiceNumber == invoiceId);
             if (invoice == null)
             {
                 return ResponseDto<Invoice>.Failed("Invoice not found.", StatusCodes.Status404NotFound);

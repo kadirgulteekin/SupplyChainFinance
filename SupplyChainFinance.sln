@@ -19,15 +19,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuyerService.Infrastructure
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{5838E6A3-D85E-48D4-8584-A012F9892CDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared\Shared.csproj", "{BD4F0555-2B82-46F8-AA68-143F432071FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared\Shared.csproj", "{BD4F0555-2B82-46F8-AA68-143F432071FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SupplierService", "SupplierService", "{DF53F1EB-544B-438F-B949-43673FBDD71B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplierService.API", "Services\SupplierService\SupplierService.API\SupplierService.API.csproj", "{1EA33292-5576-4DF7-B438-69241F9F6A5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupplierService.API", "Services\SupplierService\SupplierService.API\SupplierService.API.csproj", "{1EA33292-5576-4DF7-B438-69241F9F6A5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplierService.Domain", "Services\SupplierService\SupplierService.Domain\SupplierService.Domain.csproj", "{A7207C73-45D2-4C0D-B10E-6868080CCC26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupplierService.Domain", "Services\SupplierService\SupplierService.Domain\SupplierService.Domain.csproj", "{A7207C73-45D2-4C0D-B10E-6868080CCC26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplierService.Infrastructure", "Services\SupplierService\SupplierService.Infrastructure\SupplierService.Infrastructure.csproj", "{7214DAD0-7F3D-4AB3-ACB5-9DD5D2D72A9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupplierService.Infrastructure", "Services\SupplierService\SupplierService.Infrastructure\SupplierService.Infrastructure.csproj", "{7214DAD0-7F3D-4AB3-ACB5-9DD5D2D72A9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FinancialInstitutionService", "FinancialInstitutionService", "{0080662D-DBE6-44A7-8567-2B344774AD9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialInstitutionService.API", "Services\FinancialInstitutionService\FinancialInstitutionService.API\FinancialInstitutionService.API.csproj", "{A6CE5D6C-2ADF-4422-81B5-7FE179718567}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,10 @@ Global
 		{7214DAD0-7F3D-4AB3-ACB5-9DD5D2D72A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7214DAD0-7F3D-4AB3-ACB5-9DD5D2D72A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7214DAD0-7F3D-4AB3-ACB5-9DD5D2D72A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CE5D6C-2ADF-4422-81B5-7FE179718567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CE5D6C-2ADF-4422-81B5-7FE179718567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CE5D6C-2ADF-4422-81B5-7FE179718567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CE5D6C-2ADF-4422-81B5-7FE179718567}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +85,8 @@ Global
 		{1EA33292-5576-4DF7-B438-69241F9F6A5C} = {DF53F1EB-544B-438F-B949-43673FBDD71B}
 		{A7207C73-45D2-4C0D-B10E-6868080CCC26} = {DF53F1EB-544B-438F-B949-43673FBDD71B}
 		{7214DAD0-7F3D-4AB3-ACB5-9DD5D2D72A9F} = {DF53F1EB-544B-438F-B949-43673FBDD71B}
+		{0080662D-DBE6-44A7-8567-2B344774AD9D} = {ABF0C272-AF1C-47A4-9507-E2BBCCDED176}
+		{A6CE5D6C-2ADF-4422-81B5-7FE179718567} = {0080662D-DBE6-44A7-8567-2B344774AD9D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {73C5A472-3E83-4F62-9112-8EA5B75FD1C5}
