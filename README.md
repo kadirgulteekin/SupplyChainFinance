@@ -10,7 +10,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://www.stampli.com/wp-content/uploads/2020/11/Invoice-Management-lifecycle.png" alt="project-screenshot" width="2000" height="1000/">
+<img src="https://www.stampli.com/wp-content/uploads/2020/11/Invoice-Management-lifecycle.png" alt="project-screenshot" width="1000" height="1000/">
 
   
   
