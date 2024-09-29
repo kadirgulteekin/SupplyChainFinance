@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialInstitutionService
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupplyChainFinance.IdentityServver", "IdentityServer\SupplyChainFinance.IdentityServver\SupplyChainFinance.IdentityServver.csproj", "{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyChain.Gateway", "Gateway\SupplyChain.Gateway\SupplyChain.Gateway.csproj", "{11C13390-CBF6-46A2-A174-13DA4D736CE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C13390-CBF6-46A2-A174-13DA4D736CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C13390-CBF6-46A2-A174-13DA4D736CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C13390-CBF6-46A2-A174-13DA4D736CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C13390-CBF6-46A2-A174-13DA4D736CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{0080662D-DBE6-44A7-8567-2B344774AD9D} = {ABF0C272-AF1C-47A4-9507-E2BBCCDED176}
 		{A6CE5D6C-2ADF-4422-81B5-7FE179718567} = {0080662D-DBE6-44A7-8567-2B344774AD9D}
 		{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40} = {CDE52E36-7274-455D-AA45-2D0879A4CEAD}
+		{11C13390-CBF6-46A2-A174-13DA4D736CE0} = {3AD63A93-C889-46E9-B337-EC4E60397AD0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {73C5A472-3E83-4F62-9112-8EA5B75FD1C5}
