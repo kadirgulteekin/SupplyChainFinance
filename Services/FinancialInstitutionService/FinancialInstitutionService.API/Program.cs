@@ -1,5 +1,6 @@
 using FinancialInstitutionService.API.Mapping;
 using MassTransit;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using SupplierService.Infrastructure.Data;
 
@@ -36,7 +37,28 @@ builder.Services.AddMassTransit(x =>
 });
 
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.Authority = builder.Configuration["IdentityServerURL"];
+    options.Audience = "resource_financial";
+    options.RequireHttpsMetadata = false;
+});
+
+
+
 var app = builder.Build();
+
+
+app.UseRouting();
+
+app.UseAuthentication();
+
+
+app.UseCors("AllowAll");
+
+app.UseAuthorization();
+
+app.MapControllers();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -44,9 +66,5 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseAuthorization();
-
-app.MapControllers();
 
 app.Run();

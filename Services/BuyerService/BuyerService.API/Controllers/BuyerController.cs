@@ -6,6 +6,7 @@ using Shared.Models;
 
 namespace BuyerService.API.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class BuyerController : CustomBaseController
