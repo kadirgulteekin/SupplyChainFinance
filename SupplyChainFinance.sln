@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FinancialInstitutionService
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialInstitutionService.API", "Services\FinancialInstitutionService\FinancialInstitutionService.API\FinancialInstitutionService.API.csproj", "{A6CE5D6C-2ADF-4422-81B5-7FE179718567}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupplyChainFinance.IdentityServver", "IdentityServer\SupplyChainFinance.IdentityServver\SupplyChainFinance.IdentityServver.csproj", "{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{A6CE5D6C-2ADF-4422-81B5-7FE179718567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6CE5D6C-2ADF-4422-81B5-7FE179718567}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6CE5D6C-2ADF-4422-81B5-7FE179718567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{7214DAD0-7F3D-4AB3-ACB5-9DD5D2D72A9F} = {DF53F1EB-544B-438F-B949-43673FBDD71B}
 		{0080662D-DBE6-44A7-8567-2B344774AD9D} = {ABF0C272-AF1C-47A4-9507-E2BBCCDED176}
 		{A6CE5D6C-2ADF-4422-81B5-7FE179718567} = {0080662D-DBE6-44A7-8567-2B344774AD9D}
+		{1CA28DBC-B091-40F9-BF9D-2CE78BCFED40} = {CDE52E36-7274-455D-AA45-2D0879A4CEAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {73C5A472-3E83-4F62-9112-8EA5B75FD1C5}
