@@ -28,6 +28,7 @@ builder.Services.AddDbContext<SupplierDbContext>(opt =>
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumer<InvoiceUploadedEventConsumer>(); 
+    x.AddConsumer<PaymentCompletedConsumer>();
 
     x.UsingRabbitMq((context, cfg) =>
     {
@@ -41,6 +42,13 @@ builder.Services.AddMassTransit(x =>
         {
             e.ConfigureConsumer<InvoiceUploadedEventConsumer>(context); 
         });
+
+        cfg.ReceiveEndpoint("payment-completed-event", e =>
+        {
+            e.ConfigureConsumer<PaymentCompletedConsumer>(context);
+        });
+
+
     });
 });
 

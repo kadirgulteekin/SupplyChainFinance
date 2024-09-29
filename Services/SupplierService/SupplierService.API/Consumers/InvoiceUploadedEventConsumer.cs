@@ -1,4 +1,5 @@
-﻿using MassTransit;
+﻿using BuyerService.Infrastructure.Data;
+using MassTransit;
 using Shared.Events;
 using Shared.Models;
 using SupplierService.API.Services;
@@ -29,7 +30,7 @@ namespace SupplierService.API.Consumers
         {
             var invoiceEvent = context.Message;
 
-           
+            using var transaction = await _supplierDbContext.Database.BeginTransactionAsync();
             _logger.LogInformation($"Invoice uploaded: {invoiceEvent.InvoiceNumber} by Buyer: {invoiceEvent.BuyerTaxId} for Supplier: {invoiceEvent.SupplierTaxId}");
 
             try
@@ -75,7 +76,7 @@ namespace SupplierService.API.Consumers
                 Status = (InvoiceStatus)invoiceEvent.StatusType
             };
 
-            using var transaction = await _supplierDbContext.Database.BeginTransactionAsync();
+    
 
             try
             {
