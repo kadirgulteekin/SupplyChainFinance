@@ -40,7 +40,7 @@ https://github.com/kadirgulteekin/SupplyChainFinance.git
 
 Technologies used in the project:
 
-*   .NET 7
+*   .NET 8.0
 *   Ocelot
 *   IdentityServer4
 *   RabbitMQ
