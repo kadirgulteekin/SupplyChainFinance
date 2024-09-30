@@ -19,7 +19,7 @@ namespace SupplierService.API.Controllers
         }
 
         [HttpGet("invoices/{supplierTaxId}")]
-        public async Task<IActionResult> GetInvoicesBySupplierId(string supplierTaxId)
+        public async Task<IActionResult> GetInvoicesBySupplierTaxId(string supplierTaxId)
         {
             var invoices = await _supplierServices.GetInvoicesBySupplierIdAsync(supplierTaxId);
             return Ok(invoices);
